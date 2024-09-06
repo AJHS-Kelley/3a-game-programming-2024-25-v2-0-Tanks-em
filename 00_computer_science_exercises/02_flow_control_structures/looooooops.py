@@ -48,9 +48,13 @@ for i in range(10, 100, 5): # 10 = start - 1 = stop, 5 = # to count by
         pass # tells python this loops isn't finished, don't freak out
 
 # while loops -- musical chairs
-playerScore = 0
-while playerScore < 100 # run as long as this is true
-print(f"Starting: {playerScore}")
-playerScore += random.radiant(1,3)
-print(f"After: {playerScore}")
+playerScore = 0 
+counter = 0 
+while playerScore < 100: # run as long as this is true
+    print(f"Starting: {playerScore}")
+    playerScore += random.randint(1,3)
+    print(f"After: {playerScore}")
+    counter += 1
+print(counter)
+
 
