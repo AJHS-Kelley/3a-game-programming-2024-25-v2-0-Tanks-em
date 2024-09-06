@@ -28,3 +28,8 @@ for eachFruit in fruits:
     if eachFruit == "banana":
         break
     print(eachFruit)
+
+# for loops using range(). range(x) is exclusive it starts at 0 and ends at x - 1
+    for 1 in range(10): # range is 0 - 0
+        print(1)
+        
