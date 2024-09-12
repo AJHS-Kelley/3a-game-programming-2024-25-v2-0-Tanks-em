@@ -13,12 +13,14 @@ lives = 3
 # output the score and number of lives to the screen
 
 score = 0
-
+life = 0
 if score <= 10000:
     print("loseALife.\n")
 
-if score >= 10000:
+elif score < 100001:
     print("oneExtraLife.\n")
 
-if score >= 100000:
+else:
     print("twoExtraLives.\n")
+
+print(f"Your score is {score}! You gained {life} Lives")
