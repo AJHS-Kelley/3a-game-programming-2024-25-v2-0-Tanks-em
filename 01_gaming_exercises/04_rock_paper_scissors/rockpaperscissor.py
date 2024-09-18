@@ -17,8 +17,22 @@ playerName = input("type your name and press enter.\n")
 print(f"hello{playerName}!\n")
 isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
 
+# .lower() can turn all letters lowercase
+# .upper() can turn all letters uppercase
 
 if isCorrect == "yes":
     print(f"ok{playerName}, lets play rock, paper, scissors!\n")
 else:
     playerName = input("type your name and press enter.\n")
+# the rules using multi lined strings
+print("""
+Welcome to the rock, paper, scissors robot!
+its times to play rock, paper, scissors!
+you will play against the cpu. the first player to score five points wins. 
+you will select from rock, paper, and scissors.
+the cpu will select rock, paper, and scissors at random.
+
+1)rock beats scissors
+2)scissors beats paper
+3)paper beats rock
+""")
