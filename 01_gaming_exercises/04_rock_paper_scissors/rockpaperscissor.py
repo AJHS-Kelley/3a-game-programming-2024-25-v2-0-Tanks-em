@@ -36,3 +36,9 @@ the cpu will select rock, paper, and scissors at random.
 2)scissors beats paper
 3)paper beats rock
 """)
+
+# multi line strings
+"""
+anything in between the sets of double quotes is just ignored.
+if you need to write large comments its easier to use multi lined quotes rather than single quotes
+"""
