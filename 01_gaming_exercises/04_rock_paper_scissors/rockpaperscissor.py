@@ -42,3 +42,22 @@ the cpu will select rock, paper, and scissors at random.
 anything in between the sets of double quotes is just ignored.
 if you need to write large comments its easier to use multi lined quotes rather than single quotes
 """
+
+# main game loop
+while playerScore < 5 and cpuScore <5:
+print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
+playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
+if playerChoice != "rock" or playerChoice != "scissors" or playerChoice != "paper":
+    playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
+    if playerChoice != "rock" or playerChoice != "scissors" or playerChoice != "paper":
+        print("you are not following directions please try again.\n")
+        exit()
+        print(f"you have chosen{playerChoice}.\n")
+    else:
+        print(f"you have chosen{playerChoice}.\n")
+#print current score for player and cpu
+#let player select rock, paper, scissors
+#let cpu select rock, paper, scissors randomly
+#compare player choice to cpu choice
+#print results to the screen 
+#award point to winner and output results
