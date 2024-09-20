@@ -72,32 +72,56 @@ print(f"CPU choice: {cpuChoice}")
 #let cpu select rock, paper, scissors randomly
 #compare player choice to cpu choice
 if playerChoice == "rock" and cpuChoice == "paper":
-    pass
     #cpu wins
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("the cpu wins a point\n")
+    cpuScore += 1
 elif playerChoice == "paper" and cpuChoice == "scissors":
-    pass
     #player wins
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("you win a point\n")
+    playerScore += 1
 elif playerChoice == "rock" and cpuChoice == "rock":
-    pass
     #draw
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("its a draw!\n")
 elif #player choose scissors, cpu choose rock:
-    pass
     #cpu wins
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("the cpu wins a point\n")
+    cpuScore += 1
 elif #player choose scissors, cpu choose paper:
-    pass
     #player wins
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("you win a point\n")
+    playerScore += 1
 elif #player choose scissors, cpu choose scissors:
-    pass
     #draw
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("its a draw!\n")
 elif #player choose paper, cpu choose rock:
-    pass
     #player wins
-elif #player choose scissors, cpu choose rock:
-    pass
-    #who wins?
-elif #player choose scissors, cpu choose rock:
-    pass
-    #who wins?
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("you win a point\n")
+    playerScore += 1
+elif #player choose paper, cpu choose paper:
+    #draw
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("its a draw!\n")
+elif #player choose paper, cpu choose scissors: 
+    #cpu wins
+    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+    print("cpu wins a point\n")
+    cpuScore += 1
 else:
-#print results to the screen 
-#award point to winner and output results
+    print("unable to determine a winner. please restart.\n")
+    exit()
+
+ print(f"your final score: {playerScore}\nCpu final score: {cpuScore}\n")
+ if playerScore > cpuScore:
+    print(f"congratulations {playerName}, a winner is you\n")
+elif cpuScore > playerScore:
+    print(f"the cpu wins you are a dissapointment to all\n")
+else:
+    print("unable to determine winner.\n please restart\n")
+    exit()
