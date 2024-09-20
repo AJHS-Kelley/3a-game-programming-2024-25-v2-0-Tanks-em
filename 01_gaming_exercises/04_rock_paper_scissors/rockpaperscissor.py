@@ -47,16 +47,28 @@ if you need to write large comments its easier to use multi lined quotes rather 
 while playerScore < 5 and cpuScore <5:
 print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
 playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
-if playerChoice != "rock" or playerChoice != "scissors" or playerChoice != "paper":
+if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
     playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
-    if playerChoice != "rock" or playerChoice != "scissors" or playerChoice != "paper":
+    if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
         print("you are not following directions please try again.\n")
         exit()
         print(f"you have chosen{playerChoice}.\n")
     else:
         print(f"you have chosen{playerChoice}.\n")
 #print current score for player and cpu
+cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
+if cpuChoice == 0:
+    cpuChoice = "rock"
+elif cpuChoice == 1:
+    cpuChoice = "paper"
+elif cpuChoice == 2:
+    cpuChoice = "scissors"
+else:
+    print("Unable to determine cpu choice\n. please try again")
+    exit()
+print(f"CPU choice: {cpuChoice}")
 #let player select rock, paper, scissors
+
 #let cpu select rock, paper, scissors randomly
 #compare player choice to cpu choice
 #print results to the screen 
