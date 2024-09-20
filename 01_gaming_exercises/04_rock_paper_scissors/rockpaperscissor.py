@@ -71,5 +71,33 @@ print(f"CPU choice: {cpuChoice}")
 
 #let cpu select rock, paper, scissors randomly
 #compare player choice to cpu choice
+if playerChoice == "rock" and cpuChoice == "paper":
+    pass
+    #cpu wins
+elif playerChoice == "paper" and cpuChoice == "scissors":
+    pass
+    #player wins
+elif playerChoice == "rock" and cpuChoice == "rock":
+    pass
+    #draw
+elif #player choose scissors, cpu choose rock:
+    pass
+    #cpu wins
+elif #player choose scissors, cpu choose paper:
+    pass
+    #player wins
+elif #player choose scissors, cpu choose scissors:
+    pass
+    #draw
+elif #player choose paper, cpu choose rock:
+    pass
+    #player wins
+elif #player choose scissors, cpu choose rock:
+    pass
+    #who wins?
+elif #player choose scissors, cpu choose rock:
+    pass
+    #who wins?
+else:
 #print results to the screen 
 #award point to winner and output results
