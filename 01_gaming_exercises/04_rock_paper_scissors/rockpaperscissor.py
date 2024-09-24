@@ -58,17 +58,16 @@ while playerScore < 5 and cpuScore <5:
     else:
         print(f"you have chosen{playerChoice}.\n")
 #print current score for player and cpu
-cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
-if cpuChoice == 0:
-    cpuChoice = "rock"
-elif cpuChoice == 1:
-    cpuChoice = "paper"
-elif cpuChoice == 2:
-    cpuChoice = "scissors"
-else:
-    print("Unable to determine cpu choice\n. please try again")
-    exit()
-print(f"CPU choice: {cpuChoice}")
+        cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
+    if cpuChoice == 0:
+        cpuChoice = "rock"
+    elif cpuChoice == 1:
+        cpuChoice = "paper"
+    elif cpuChoice == 2:
+        cpuChoice = "scissors"
+    else:
+        print("Unable to determine cpu choice\n. please try again")
+        exit()
 #let player select rock, paper, scissors
 
 #let cpu select rock, paper, scissors randomly
