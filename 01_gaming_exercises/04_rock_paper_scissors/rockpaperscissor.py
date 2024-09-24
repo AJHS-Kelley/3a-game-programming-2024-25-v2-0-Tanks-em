@@ -44,15 +44,17 @@ if you need to write large comments its easier to use multi lined quotes rather 
 """
 
 # main game loop
+
 while playerScore < 5 and cpuScore <5:
-print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
-playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
-if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
+
+    print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
     playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
+    # YOU NEED TO FIX THE INDENTING ON ALMOST EVERY LINE AFTER THIS. 
+        playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
+    if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
         print("you are not following directions please try again.\n")
-        exit()
-        print(f"you have chosen{playerChoice}.\n")
+        exit()        
     else:
         print(f"you have chosen{playerChoice}.\n")
 #print current score for player and cpu
@@ -117,8 +119,10 @@ else:
     print("unable to determine a winner. please restart.\n")
     exit()
 
- print(f"your final score: {playerScore}\nCpu final score: {cpuScore}\n")
- if playerScore > cpuScore:
+# STOP INDENTING HERE.  
+
+print(f"your final score: {playerScore}\nCpu final score: {cpuScore}\n")
+if playerScore > cpuScore:
     print(f"congratulations {playerName}, a winner is you\n")
 elif cpuScore > playerScore:
     print(f"the cpu wins you are a dissapointment to all\n")
