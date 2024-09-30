@@ -96,4 +96,4 @@ else:
 rpsTimeStop = time.time()
 rpsTime = rpsTimeStop - rpsTimeStart
 print(f"number of loops: {loopCount}\n")
-print(f"Execution Time {rpsTime:.}")
+print(f"Execution Time {rpsTime:.}") 
