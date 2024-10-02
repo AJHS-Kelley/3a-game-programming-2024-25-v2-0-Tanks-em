@@ -18,10 +18,6 @@ loopsReq = input("how many loops do you want?\nEnter and integer no commas and p
 # req is the universal abreviation for request is computer science
 rpsTimeStart = time.time() # returns the number of seconds since Jan. 01, 1970 @ 12:00 am
 while loopCount < loopsReq:
-     
-
-
-
     while playerScore < 5 and cpuScore <5:
 
 #let cpu select rock paper or scissors
