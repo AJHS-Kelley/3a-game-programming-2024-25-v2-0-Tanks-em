@@ -13,17 +13,22 @@ cpuScore = 0
 cpuChoice = None
 
 # player name input
-playerName = input("type your name and press enter.\n")
-print(f"hello{playerName}!\n")
-isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
-
-# .lower() can turn all letters lowercase
-# .upper() can turn all letters uppercase
-
-if isCorrect == "yes":
-    print(f"ok{playerName}, lets play rock, paper, scissors!\n")
-else:
+def playerName(): # function signature -- name of function, (arguments if any)
     playerName = input("type your name and press enter.\n")
+    print(f"hello{playerName}!\n")
+    isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
+
+    # .lower() can turn all letters lowercase
+    # .upper() can turn all letters uppercase
+
+    if isCorrect == "yes":
+        print(f"ok{playerName}, lets play rock, paper, scissors!\n")
+    else:
+        playerName = input("type your name and press enter.\n")
+
+# calling the function
+playerName()
+
 # the rules using multi lined strings
 print("""
 Welcome to the rock, paper, scissors robot!
@@ -86,32 +91,20 @@ elif playerChoice == "rock" and cpuChoice == "rock":
     #draw
     print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
     print("its a draw!\n")
-elif #player choose scissors, cpu choose rock:
-    #cpu wins
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("the cpu wins a point\n")
     cpuScore += 1
-elif #player choose scissors, cpu choose paper:
-    #player wins
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("you win a point\n")
     playerScore += 1
-elif #player choose scissors, cpu choose scissors:
-    #draw
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("its a draw!\n")
-elif #player choose paper, cpu choose rock:
-    #player wins
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("you win a point\n")
     playerScore += 1
-elif #player choose paper, cpu choose paper:
-    #draw
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("its a draw!\n")
-elif #player choose paper, cpu choose scissors: 
-    #cpu wins
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
     print("cpu wins a point\n")
     cpuScore += 1
 else:
