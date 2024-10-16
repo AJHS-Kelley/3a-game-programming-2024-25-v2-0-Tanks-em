@@ -25,6 +25,7 @@ def playerName(): # function signature -- name of function, (arguments if any)
         print(f"ok{playerName}, lets play rock, paper, scissors!\n")
     else:
         playerName = input("type your name and press enter.\n")
+    return playerName
 
 # calling the function
 playerName()
