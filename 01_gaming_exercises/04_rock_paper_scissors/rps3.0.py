@@ -18,9 +18,6 @@ def playerName(): # function signature -- name of function, (arguments if any)
     print(f"hello{playerName}!\n")
     isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
 
-    # .lower() can turn all letters lowercase
-    # .upper() can turn all letters uppercase
-
     if isCorrect == "yes":
         print(f"ok{playerName}, lets play rock, paper, scissors!\n")
     else:
@@ -28,32 +25,26 @@ def playerName(): # function signature -- name of function, (arguments if any)
     return playerName
 
 # calling the function
-playerName()
+playerName = playerName()
 
 # the rules using multi lined strings
-print("""
-Welcome to the rock, paper, scissors robot!
-its times to play rock, paper, scissors!
-you will play against the cpu. the first player to score five points wins. 
-you will select from rock, paper, and scissors.
-the cpu will select rock, paper, and scissors at random.
+def rules():
+    print("""
+    Welcome to the rock, paper, scissors robot!
+    its times to play rock, paper, scissors!
+    you will play against the cpu. the first player to score five points wins. 
+    you will select from rock, paper, and scissors.
+    the cpu will select rock, paper, and scissors at random.
 
-1)rock beats scissors
-2)scissors beats paper
-3)paper beats rock
-""")
+    1)rock beats scissors
+    2)scissors beats paper
+    3)paper beats rock
+    """)
+    # does another part of this program need to access this information
+    # if yes you must have a return statement
+    # if no a return statement is not required
 
-# multi line strings
-"""
-anything in between the sets of double quotes is just ignored.
-if you need to write large comments its easier to use multi lined quotes rather than single quotes
-"""
-
-# main game loop
-
-while playerScore < 5 and cpuScore <5:
-
-    print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
+def playerChoice():
     playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
     # YOU NEED TO FIX THE INDENTING ON ALMOST EVERY LINE AFTER THIS. 
@@ -63,8 +54,10 @@ while playerScore < 5 and cpuScore <5:
         exit()        
     else:
         print(f"you have chosen{playerChoice}.\n")
-#print current score for player and cpu
-        cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
+    return playerChoice
+
+def cpuChoice():
+    cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
@@ -74,6 +67,15 @@ while playerScore < 5 and cpuScore <5:
     else:
         print("Unable to determine cpu choice\n. please try again")
         exit()
+    return cpuChoice
+# main game loop
+
+while playerScore < 5 and cpuScore <5:
+
+    print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
+    
+#print current score for player and cpu
+    
 #let player select rock, paper, scissors
 
 #let cpu select rock, paper, scissors randomly
