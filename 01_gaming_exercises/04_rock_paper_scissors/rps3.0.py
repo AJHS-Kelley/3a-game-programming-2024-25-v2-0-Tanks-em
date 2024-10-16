@@ -13,7 +13,9 @@ cpuScore = 0
 cpuChoice = None
 
 # player name input
-def playerName(): # function signature -- name of function, (arguments if any)
+def playerName() -> str: # function signature -- name of function, (arguments if any)
+    """gets the name from the player and reutrns it."""
+    # the line above is a docstring, it gives brief example of what the function does.
     playerName = input("type your name and press enter.\n")
     print(f"hello{playerName}!\n")
     isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
@@ -28,7 +30,8 @@ def playerName(): # function signature -- name of function, (arguments if any)
 playerName = playerName()
 
 # the rules using multi lined strings
-def rules():
+def rules() -> None:
+    """this function prints the rules for rock, paper, scissors."""
     print("""
     Welcome to the rock, paper, scissors robot!
     its times to play rock, paper, scissors!
@@ -44,7 +47,8 @@ def rules():
     # if yes you must have a return statement
     # if no a return statement is not required
 
-def playerChoice():
+def playerChoice() -> str: 
+    """Allows the player to choose rock, paper, scissors"""
     playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" and playerChoice != "scissors" and playerChoice != "paper":
     # YOU NEED TO FIX THE INDENTING ON ALMOST EVERY LINE AFTER THIS. 
@@ -56,7 +60,8 @@ def playerChoice():
         print(f"you have chosen{playerChoice}.\n")
     return playerChoice
 
-def cpuChoice():
+def cpuChoice() -> str:
+    """Allows the CPU to choose rock, paper, scissors"""
     cpuChoice = random.randint(0, 2) #randomly select 0, 1 or 2.
     if cpuChoice == 0:
         cpuChoice = "rock"
