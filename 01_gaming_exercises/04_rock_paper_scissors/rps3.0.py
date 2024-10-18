@@ -33,7 +33,7 @@ playerName = playerName()
 def rules() -> None:
     """this function prints the rules for rock, paper, scissors."""
     print("""
-    Welcome to the rock, paper, scissors robot!
+    Welcome, {playerName} to the rock, paper, scissors robot!
     its times to play rock, paper, scissors!
     you will play against the cpu. the first player to score five points wins. 
     you will select from rock, paper, and scissors.
@@ -79,24 +79,19 @@ while playerScore < 5 and cpuScore <5:
 
     print(f"{playerName} you have {playerScore} points.\n The cpu has {cpuScore} points.\n")
     
-#print current score for player and cpu
-    
-#let player select rock, paper, scissors
-
-#let cpu select rock, paper, scissors randomly
-#compare player choice to cpu choice
-if playerChoice == "rock" and cpuChoice == "paper":
+def pickWinner(playerChoice: str, cpuChoice: str) -> str:
+    """Determines the winner using player and CPU choices."""
+    if playerChoice == "rock" and cpuChoice == "paper":
     #cpu wins
-    print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
-    print("the cpu wins a point\n")
-    cpuScore += 1
+        print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
+        print("the cpu wins a point\n")
+        cpuScore += 1
+    return
 elif playerChoice == "paper" and cpuChoice == "scissors":
-    #player wins
     print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
     print("you win a point\n")
     playerScore += 1
 elif playerChoice == "rock" and cpuChoice == "rock":
-    #draw
     print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n.")
     print("its a draw!\n")
 elif print(f"cpu chose {cpuChoice} and you chose {playerChoice}\n."):
