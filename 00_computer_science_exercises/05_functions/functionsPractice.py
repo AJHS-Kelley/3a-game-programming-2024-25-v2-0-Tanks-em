@@ -14,13 +14,35 @@ def helloWorldMulti(): # function signature
         [S]panish
         [J]apanese
         """)
-    languageChoice = input("what language do you want?\n please type the first letter of the language you want,\n").lower()
-    if languageChoice == "spanish":
+    languageChoice = input("what language do you want?\n please type the first letter of the language you want,\n").upper()
+    if languageChoice == "S":
         print("Hola, Mundo!")
-    elif languageChoice == "english":
+    elif languageChoice == "E":
         print("Hello, World!")
     else:
         print("Konichiwa, Sekai!")
 
-helloWorldMulti()
+#helloWorldMulti() # function call
 
+# function to determine even / odd numbers
+arguement1 = random.randint(-1000, 1000)
+
+def isEven(arguement1: int) -> bool: #requires one arguement and returns a boolean value
+    """determines if an integer value is even or odd."""
+    if arguement1 % 2 == 0:
+        return True
+    else:
+        return False
+    
+print(isEven(arguement1))
+
+# function with multiple aruguements
+def canRideRollerCoaster(age: int, height: int) -> bool:
+    if age > 10 and height > 4:
+        print("you can ride.\n")
+        return True
+    else:
+        print("you cannot ride.\n")
+        return False
+    
+canRideRollerCoaster(4, 10) # arguements msut be passed in the same order as the function signature indicates.
