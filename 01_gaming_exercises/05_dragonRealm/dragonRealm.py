@@ -33,10 +33,10 @@ def checkCave(chosenCave):
         chosenCave = "mountainCave"
     elif caveNumber == 3:
         chosenCave = "undergroundCave"
-
+    return chosenCave
     
     
-
+def caveDescription(chosenCave, hasTorch):
     if chosenCave == "forestCave":
         print('you enter the cave to be greeted by a very kind dragon that gives you treasure')
     elif chosenCave == "mountainCave":
@@ -59,5 +59,6 @@ while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
     caveNumber = chooseCave()
     checkCave(caveNumber)
+    caveDescription()
     print('Do you want to play again? (yes or no)')
     playAgain = input() 
