@@ -4,6 +4,8 @@
 import random
 import time
 
+hasTorch = False
+
 def displayIntro():
 
     print('You are in a land that harbors dragons and all manner of fantasy creatures. In front of you,')
@@ -22,22 +24,24 @@ def chooseCave():
     return cave
 
 def checkCave(chosenCave):
+    if input == 1:
+        chosenCave = "forestCave"
+    elif input == 2:
+        chosenCave = "mountainCave"
+    elif input == 3:
+        chosenCave = "undergroundCave"
+
     print('You approach the cave...')
-    time.sleep(2)
-    print('It is dark and spooky...')
-    time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
-    print()
-    time.sleep(2)
+    
 
-    chosenCave = random.randint(1, 3)
-
-    if chosenCave == str(forestCave):
-        print('Gives you his treasure!')
-    elif chosenCave == str(mountainCave):
-        print('devours you quickly in one bite!')
-    else:
-        print('you awake the small skeleton army!')
+    if chosenCave == "forestCave":
+        print('you enter the cave to be greeted by a very kind dragon that gives you treasure')
+    elif chosenCave == "mountainCave":
+        print('you enter a cave with a bloodlustful dragon that hasnt eaten in days')
+        print('while the dragon is cornering you you pick up a torch on the ground and light it with two rocks')
+        hasTorch = True
+    elif chosenCave == "undergroundCave":
+        print('you awaken a skeleton army as you enter the cave')
   
     
     
