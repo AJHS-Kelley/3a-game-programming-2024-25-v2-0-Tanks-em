@@ -17,21 +17,24 @@ def displayIntro():
     print()
 
 def chooseCave():
-    cave = ''
-    while cave != '1' and cave != '2' and cave != '3':
+    caveNumber = None
+    while caveNumber != '1' and caveNumber != '2' and caveNumber != '3':
         print('Which cave will you go into? (1 or 2 or 3)')
-        cave = input()
-    return cave
+        caveNumber = input()
+    return caveNumber
 
 def checkCave(chosenCave):
-    if input == 1:
-        chosenCave = "forestCave"
-    elif input == 2:
-        chosenCave = "mountainCave"
-    elif input == 3:
-        chosenCave = "undergroundCave"
 
     print('You approach the cave...')
+
+    if caveNumber == 1:
+        chosenCave = "forestCave"
+    elif caveNumber == 2:
+        chosenCave = "mountainCave"
+    elif caveNumber == 3:
+        chosenCave = "undergroundCave"
+
+    
     
 
     if chosenCave == "forestCave":
@@ -40,6 +43,7 @@ def checkCave(chosenCave):
         print('you enter a cave with a bloodlustful dragon that hasnt eaten in days')
         print('while the dragon is cornering you you pick up a torch on the ground and light it with two rocks')
         hasTorch = True
+        return hasTorch
     elif chosenCave == "undergroundCave":
         print('you awaken a skeleton army as you enter the cave')
   
