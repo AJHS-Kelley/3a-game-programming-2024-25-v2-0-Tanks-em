@@ -3,6 +3,22 @@
 
 import random
 import time
+import datetime
+
+# saving data to a file 
+# step 1 -- create the file name to use.
+#logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
+logFileName = "dragonRealmLog.txt"
+# example: dragonRealmLog1132AM.txt
+
+# step 2 -- create / open the file to save data.
+saveData = open(logFileName, "a")
+# file modes
+# "x" creates file, if file exists, exit with error message.
+# "w" creates file, if file exists, overwrite and erase file contents.
+# "a" creates file, if file exists, append data to the file.
+ 
+
 
 hasTorch = False
 
