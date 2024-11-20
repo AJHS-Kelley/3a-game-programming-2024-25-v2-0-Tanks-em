@@ -18,7 +18,7 @@ saveData = open(logFileName, "a")
 # "w" creates file, if file exists, overwrite and erase file contents.
 # "a" creates file, if file exists, append data to the file.
  
-
+saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
 hasTorch = False
 
@@ -78,3 +78,6 @@ while playAgain == 'yes' or playAgain == 'y':
     caveDescription()
     print('Do you want to play again? (yes or no)')
     playAgain = input() 
+
+    #close the file
+    saveData.close()
