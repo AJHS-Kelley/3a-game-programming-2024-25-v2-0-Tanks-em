@@ -1,5 +1,7 @@
 # Dragon Realm, <STUDENT_NAME>, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
+# You need to finish by Friday. 
+# Code crashes as soon as I select cave 1, your caveDescription() function has two arguments but they are never passed. See Line 79. 
 
 import random
 import time
