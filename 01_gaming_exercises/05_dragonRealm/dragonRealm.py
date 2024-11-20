@@ -43,11 +43,11 @@ def checkCave(chosenCave):
 
     print('You approach the cave...')
 
-    if caveNumber == 1:
+    if caveNumber == ('1'):
         chosenCave = "forestCave"
-    elif caveNumber == 2:
+    elif caveNumber == ('2'):
         chosenCave = "mountainCave"
-    elif caveNumber == 3:
+    elif caveNumber == ('3'):
         chosenCave = "undergroundCave"
     return chosenCave
     
@@ -80,4 +80,4 @@ while playAgain == 'yes' or playAgain == 'y':
     playAgain = input() 
 
     #close the file
-    saveData.close()
+    saveData.close() 
