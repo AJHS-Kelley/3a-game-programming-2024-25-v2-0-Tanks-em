@@ -2,7 +2,7 @@
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
 # You need to finish by Friday. 
 # Code crashes as soon as I select cave 1, your caveDescription() function has two arguments but they are never passed. See Line 79. 
-# 2024-12-09 -- 70% 
+# 2024-12-09 -- 73% 
 import random
 import time
 import datetime
